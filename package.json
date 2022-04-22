@@ -8,7 +8,8 @@
     "prettier": "prettier --write .",
     "build": "rollup -c ./rollup.config.js",
     "serve": "rollup -w -c ./rollup.config.js",
-    "test": "vitest run --coverage"
+    "test": "vitest run --coverage",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "rollup": "^2.70.2",
     "tslib": "^2.3.1",
     "typescript": "^4.6.3",
-    "vitest": "^0.9.4"
+    "vitest": "^0.9.4",
+    "husky": "^7.0.0"
   }
 }
