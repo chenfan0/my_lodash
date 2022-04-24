@@ -8,6 +8,7 @@ import { drop } from '../drop'
 import { dropRight } from '../dropRight'
 import { fill } from '../fill'
 import { findIndex } from '../findIndex'
+import { findLastIndex } from '../findLastIndex'
 
 test('chunk', () => {
   expect(chunk(['a', 'b', 'c', 'd'], 2)).toStrictEqual([
@@ -50,7 +51,7 @@ test('fill', () => {
 })
 
 test('findIndex', () => {
-  const arr = [1, 2, 3, 4, 5]
+  const arr = [1, 2, 3, 4, 5, 1]
 
   expect(
     findIndex(arr, function (value, index, arr) {
@@ -60,6 +61,22 @@ test('findIndex', () => {
 
   expect(
     findIndex(arr, function (value, index, arr) {
+      return value === 8
+    })
+  ).toBe(-1)
+})
+
+test('findLastIndex', () => {
+  const arr = [1, 2, 3, 4, 5, 1]
+
+  expect(
+    findLastIndex(arr, function (value, index, arr) {
+      return value === 1
+    })
+  ).toBe(5)
+
+  expect(
+    findLastIndex(arr, function (value, index, arr) {
       return value === 8
     })
   ).toBe(-1)
