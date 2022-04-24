@@ -7,6 +7,7 @@ import { difference } from '../difference'
 import { drop } from '../drop'
 import { dropRight } from '../dropRight'
 import { fill } from '../fill'
+import { findIndex } from '../findIndex'
 
 test('chunk', () => {
   expect(chunk(['a', 'b', 'c', 'd'], 2)).toStrictEqual([
@@ -46,4 +47,20 @@ test('fill', () => {
   expect(fill([1, 2, 3], 'a')).toStrictEqual(['a', 'a', 'a'])
   expect(fill(Array(3), 2)).toStrictEqual([2, 2, 2])
   expect(fill([4, 6, 8, 10], '*', 1, 3)).toStrictEqual([4, '*', '*', 10])
+})
+
+test('findIndex', () => {
+  const arr = [1, 2, 3, 4, 5]
+
+  expect(
+    findIndex(arr, function (value, index, arr) {
+      return value === 1
+    })
+  ).toBe(0)
+
+  expect(
+    findIndex(arr, function (value, index, arr) {
+      return value === 8
+    })
+  ).toBe(-1)
 })
