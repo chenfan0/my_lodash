@@ -1,7 +1,8 @@
 import { expect, test, describe } from 'vitest'
 import { isEqual } from '../../lang/isEqual'
+import { matches } from '../matches'
 
-describe('types', () => {
+describe('isEqual', () => {
   test('primitive', () => {
     let x: any = 1
     let y = 2
@@ -67,5 +68,15 @@ describe('types', () => {
     const date2 = date1
     expect(isEqual(reg1, reg2)).toBe(true)
     expect(isEqual(date1, date2)).toBe(true)
+  })
+})
+
+describe('matches', () => {
+  test('matches', () => {
+    const objects = [
+      { a: 1, b: 2, c: 3 },
+      { a: 4, b: 5, c: 6 }
+    ]
+    expect(objects.filter(matches({ a: 4, c: 6 }))).toStrictEqual([{ a: 4, b: 5, c: 6 }])
   })
 })
