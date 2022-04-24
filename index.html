@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+      function foo() {}
+      function bar() {}
+      const arr1 = [1, 2]
+      const arr2 = [2, 1]
+      const set1 = new Set([1, 2])
+      const set2 = new Set(arr2)
+      const weakSet1 = new WeakSet()
+      const weakSet2 = new WeakSet()
+      console.log(set1, set2)
+      const reg1 = /^/
+      const reg2 = /^/
+
+      // console.log(reg1.valueOf() === reg2.valueOf())
+      // console.log(_.isEqual(reg1, reg2))
+      // console.log(_.isEqual(arr1, arr2))
+      // console.log(_.isEqual(set1, set2))
+      console.log(_.isEqual(weakSet1, weakSet2))
+    </script>
+  </body>
+</html>

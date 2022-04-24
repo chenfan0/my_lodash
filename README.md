@@ -10,4 +10,9 @@
   - [dropRight.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/dropRight.ts)
   - [fill.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/fill.ts)
 - [collection](https://github.com/chenfan0/my_lodash/tree/main/lib/collection)
+- [lang](https://github.com/chenfan0/my_lodash/tree/main/lib/lang)
+  - [isEqual.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/lang/isEqual.ts)
+- [util](https://github.com/chenfan0/my_lodash/tree/main/lib/util)
+  - [matches.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/util/matches.ts)
+  - [types.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/util/types.ts)
 <!--filetoc-end-->
