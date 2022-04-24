@@ -8,5 +8,6 @@
   - [difference.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/difference.ts)
   - [drop.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/drop.ts)
   - [dropRight.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/dropRight.ts)
+  - [fill.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/fill.ts)
 - [collection](https://github.com/chenfan0/my_lodash/tree/main/lib/collection)
 <!--filetoc-end-->
