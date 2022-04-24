@@ -5,6 +5,7 @@ import { compact } from '../compact'
 import { concat } from '../concat'
 import { difference } from '../difference'
 import { drop } from '../drop'
+import { dropRight } from '../dropRight'
 
 test('chunk', () => {
   expect(chunk(['a', 'b', 'c', 'd'], 2)).toStrictEqual([
@@ -32,4 +33,10 @@ test('drop', () => {
   expect(drop([1, 2, 3])).toStrictEqual([2, 3])
   expect(drop([1, 2, 3], 2)).toStrictEqual([3])
   expect(drop([1, 2, 3], 0)).toStrictEqual([1, 2, 3])
+})
+
+test('dropRight', () => {
+  expect(dropRight([1, 2, 3])).toStrictEqual([1, 2])
+  expect(dropRight([1, 2, 3], 2)).toStrictEqual([1])
+  expect(dropRight([1, 2, 3], 0)).toStrictEqual([1, 2, 3])
 })
