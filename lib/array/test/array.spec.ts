@@ -10,6 +10,7 @@ import { fill } from '../fill'
 import { findIndex } from '../findIndex'
 import { findLastIndex } from '../findLastIndex'
 import { head } from '../head'
+import { indexOf } from '../indexOf'
 
 test('chunk', () => {
   expect(chunk(['a', 'b', 'c', 'd'], 2)).toStrictEqual([
@@ -86,4 +87,9 @@ test('findLastIndex', () => {
 test('head', () => {
   expect(head([1, 2, 3])).toBe(1)
   expect(head([])).toBe(undefined)
+})
+
+test('indexOf', () => {
+  expect(indexOf([1, 2, 1, 2], 2)).toBe(1)
+  expect(indexOf([1, 2, 1, 2], 2, 2)).toBe(3)
 })

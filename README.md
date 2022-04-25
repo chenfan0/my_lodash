@@ -12,6 +12,7 @@
   - [findIndex.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/findIndex.ts)
   - [findLastIndex.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/findLastIndex.ts)
   - [head.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/head.ts)
+  - [indexOf.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/indexOf.ts)
 - [collection](https://github.com/chenfan0/my_lodash/tree/main/lib/collection)
 - [lang](https://github.com/chenfan0/my_lodash/tree/main/lib/lang)
   - [isEqual.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/lang/isEqual.ts)
