@@ -1,4 +1,5 @@
 import { test, expect } from 'vitest'
+import { isEqual } from '../../lang/isEqual'
 
 import { chunk } from '../chunk'
 import { compact } from '../compact'
@@ -15,6 +16,7 @@ import { head } from '../head'
 import { indexOf } from '../indexOf'
 import { initial } from '../initial'
 import { intersection } from '../intersection'
+import { intersectionWith } from '../intersectionWith'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -148,4 +150,16 @@ test('intersection', () => {
   expect(intersection([2, 1], [2, 3])).toStrictEqual([2])
   expect(intersection([2, 1], [3, 4])).toStrictEqual([])
   expect(intersection([2, 1, 2], [3, 2], [2])).toStrictEqual([2])
+})
+
+test('intersectionWith', () => {
+  const objects = [
+    { x: 1, y: 2 },
+    { x: 2, y: 1 }
+  ]
+  const others = [
+    { x: 1, y: 1 },
+    { x: 1, y: 2 }
+  ]
+  expect(intersectionWith(objects, others, isEqual)).toStrictEqual([{ x: 1, y: 2 }])
 })

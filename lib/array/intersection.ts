@@ -3,7 +3,7 @@ export function intersection(...array: any[][]) {
   if (!n) return []
 
   const result: any[] = []
-  // 确保arr1没有重复的值
+  // 确保arr0没有重复的值
   const arr0 = [...new Set(array[0])]
   if (n === 1) return arr0
 
