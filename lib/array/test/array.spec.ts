@@ -22,6 +22,7 @@ import { join } from '../join'
 import { last } from '../last'
 import { lastIndexOf } from '../lastIndexOf'
 import { pull } from '../pull'
+import { remove } from '../remove'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -202,4 +203,18 @@ test('pull', () => {
   const arr = ['a', 'b', 'c', 'a', 'b', 'c']
   pull(arr, 'a', 'c')
   expect(arr).toStrictEqual(['b', 'b'])
+})
+
+test('remove', () => {
+  const arr = [1, 2, 3, 4]
+  const result = remove(arr)
+  expect(arr).toStrictEqual([])
+  expect(result).toStrictEqual([1, 2, 3, 4])
+
+  const array = [1, 2, 3, 4]
+  const evens = remove(array, function (n) {
+    return n % 2 == 0
+  })
+  expect(array).toStrictEqual([1, 3])
+  expect(evens).toStrictEqual([2, 4])
 })

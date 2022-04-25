@@ -25,6 +25,7 @@
   - [last.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/last.ts)
   - [lastIndexOf.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/lastIndexOf.ts)
   - [pull.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/pull.ts)
+  - [remove.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/remove.ts)
   - [slice.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/slice.ts)
 - [collection](https://github.com/chenfan0/my_lodash/tree/main/lib/collection)
 - [lang](https://github.com/chenfan0/my_lodash/tree/main/lib/lang)
