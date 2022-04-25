@@ -20,6 +20,7 @@
   - [initial.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/initial.ts)
   - [intersection.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/intersection.ts)
   - [intersectionWith.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/intersectionWith.ts)
+  - [join.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/join.ts)
   - [slice.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/slice.ts)
 - [collection](https://github.com/chenfan0/my_lodash/tree/main/lib/collection)
 - [lang](https://github.com/chenfan0/my_lodash/tree/main/lib/lang)

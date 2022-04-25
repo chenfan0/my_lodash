@@ -17,6 +17,7 @@ import { indexOf } from '../indexOf'
 import { initial } from '../initial'
 import { intersection } from '../intersection'
 import { intersectionWith } from '../intersectionWith'
+import { join } from '../join'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -162,4 +163,11 @@ test('intersectionWith', () => {
     { x: 1, y: 2 }
   ]
   expect(intersectionWith(objects, others, isEqual)).toStrictEqual([{ x: 1, y: 2 }])
+})
+
+test('join', () => {
+  expect(join([1, 2, 3])).toBe('123')
+  expect(join([1, 2, 3], '*')).toBe('1*2*3')
+  expect(join([undefined, 2, 3], '*')).toBe('*2*3')
+  expect(join([{}, 2, 3], '*')).toBe('[object Object]*2*3')
 })
