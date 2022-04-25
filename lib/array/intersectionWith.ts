@@ -1,3 +1,5 @@
+import { types } from '../util/types'
+
 export function intersectionWith(...array: any[]) {
   const n = array.length
   if (!n) return []
@@ -6,7 +8,8 @@ export function intersectionWith(...array: any[]) {
   // 确保arr0没有重复的值
   const arr0 = [...new Set(array[0])]
   if (n === 1) return arr0
-  const fn = array[array.length - 1] as (x, y) => boolean
+  const lastItem = array[array.length - 1]
+  const fn = types(lastItem) === 'Function' ? lastItem : (x, y) => x === y
 
   for (let i = 0; i < arr0.length; i++) {
     const item = arr0[i]
