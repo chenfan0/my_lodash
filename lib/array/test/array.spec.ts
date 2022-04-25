@@ -25,6 +25,7 @@ import { pull } from '../pull'
 import { remove } from '../remove'
 import { reverse } from '../reverse'
 import { slice } from '../slice'
+import { sortedIndex } from '../sortedIndex'
 
 test('chunk', () => {
   expect(chunk(['a', 'b', 'c', 'd'], 2)).toStrictEqual([
@@ -224,4 +225,12 @@ test('reverse', () => {
   expect(reverse([1, 2, 3])).toStrictEqual([3, 2, 1])
   expect(reverse([1])).toStrictEqual([1])
   expect(reverse([1, 2, 3, 4])).toStrictEqual([4, 3, 2, 1])
+})
+
+test('sortedIndex', () => {
+  const arr = [1, 2, 3, 4, 4, 5, 5, 5, 6]
+  expect(sortedIndex(arr, 0)).toBe(0)
+  expect(sortedIndex(arr, 2)).toBe(2)
+  expect(sortedIndex(arr, 4)).toBe(5)
+  expect(sortedIndex(arr, 6)).toBe(9)
 })
