@@ -23,6 +23,7 @@ import { last } from '../last'
 import { lastIndexOf } from '../lastIndexOf'
 import { pull } from '../pull'
 import { remove } from '../remove'
+import { reverse } from '../reverse'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -217,4 +218,10 @@ test('remove', () => {
   })
   expect(array).toStrictEqual([1, 3])
   expect(evens).toStrictEqual([2, 4])
+})
+
+test('reverse', () => {
+  expect(reverse([1, 2, 3])).toStrictEqual([3, 2, 1])
+  expect(reverse([1])).toStrictEqual([1])
+  expect(reverse([1, 2, 3, 4])).toStrictEqual([4, 3, 2, 1])
 })
