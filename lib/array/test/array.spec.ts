@@ -11,6 +11,7 @@ import { findIndex } from '../findIndex'
 import { findLastIndex } from '../findLastIndex'
 import { head } from '../head'
 import { indexOf } from '../indexOf'
+import { initial } from '../initial'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -109,4 +110,8 @@ test('slice', () => {
   // 小数情况
   expect(slice(arr, 0, 3.5)).toStrictEqual(arr.slice(0, 3.5))
   expect(slice(arr, 0, -3.5)).toStrictEqual(arr.slice(0, -3.5))
+})
+
+test('initial', () => {
+  expect(initial([1, 2, 3])).toStrictEqual([1, 2])
 })
