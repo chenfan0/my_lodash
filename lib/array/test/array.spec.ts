@@ -27,6 +27,7 @@ import { reverse } from '../reverse'
 import { slice } from '../slice'
 import { sortedIndex } from '../sortedIndex'
 import { sortedIndexOf } from '../sortedIndexOf'
+import { sortedLastIndex } from '../sortedLastIndex'
 
 test('chunk', () => {
   expect(chunk(['a', 'b', 'c', 'd'], 2)).toStrictEqual([
@@ -244,10 +245,10 @@ test('sortedIndexOf', () => {
   expect(sortedIndexOf(arr, 6)).toBe(8)
 })
 
-// test('sortedLastIndex', () => {
-//   const arr = [1, 2, 3, 4, 4, 5, 5, 5, 6]
-//   expect(sortedLastIndex(arr, 0)).toBe(0)
-//   expect(sortedLastIndex(arr, 2)).toBe(2)
-//   expect(sortedLastIndex(arr, 4)).toBe(5)
-//   expect(sortedLastIndex(arr, 6)).toBe(9)
-// })
+test('sortedLastIndex', () => {
+  const arr = [1, 2, 3, 4, 4, 5, 5, 5, 6]
+  expect(sortedLastIndex(arr, 0)).toBe(0)
+  expect(sortedLastIndex(arr, 2)).toBe(2)
+  expect(sortedLastIndex(arr, 4)).toBe(5)
+  expect(sortedLastIndex(arr, 6)).toBe(9)
+})

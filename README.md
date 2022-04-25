@@ -30,6 +30,7 @@
   - [slice.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/slice.ts)
   - [sortedIndex.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/sortedIndex.ts)
   - [sortedIndexOf.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/sortedIndexOf.ts)
+  - [sortedLastIndex.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/sortedLastIndex.ts)
 - [collection](https://github.com/chenfan0/my_lodash/tree/main/lib/collection)
 - [lang](https://github.com/chenfan0/my_lodash/tree/main/lib/lang)
   - [isEqual.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/lang/isEqual.ts)
