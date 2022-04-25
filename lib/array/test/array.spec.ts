@@ -1,5 +1,6 @@
 import { test, expect } from 'vitest'
 import { isEqual } from '../../lang/isEqual'
+import { at } from '../at'
 
 import { chunk } from '../chunk'
 import { compact } from '../compact'
@@ -181,10 +182,17 @@ test('last', () => {
   expect(last([obj])).toBe(obj)
 })
 
-test.only('lastIndexOf', () => {
+test('lastIndexOf', () => {
   const arr = [1, 2, 3, 4, 2, 3]
 
   expect(lastIndexOf(arr, 2)).toBe(4)
   expect(lastIndexOf(arr, 2, 2)).toBe(1)
   expect(lastIndexOf(arr, 2, -3)).toBe(1)
+})
+
+test('at', () => {
+  const arr = [1, 2, 3]
+  expect(at(arr)).toBe(1)
+  expect(at(arr, -1)).toBe(3)
+  expect(at(arr, -10)).toBe(undefined)
 })
