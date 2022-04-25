@@ -10,6 +10,7 @@ import { fill } from '../fill'
 import { findIndex } from '../findIndex'
 import { findLastIndex } from '../findLastIndex'
 import { flatten } from '../flatten'
+import { fromEntries } from '../fromEntries'
 import { head } from '../head'
 import { indexOf } from '../indexOf'
 import { initial } from '../initial'
@@ -123,4 +124,15 @@ test('flatten', () => {
   expect(flatten([1, [2, [3, [4]], 5]], 2)).toStrictEqual([1, 2, 3, [4], 5])
   expect(flatten([1, [2, [3, [4]], 5]], 3)).toStrictEqual([1, 2, 3, 4, 5])
   expect(flatten([1, [2, [3, [4]], 5]], 4)).toStrictEqual([1, 2, 3, 4, 5])
+})
+
+test('fromEntries', () => {
+  expect(
+    fromEntries([
+      ['a', 1],
+      ['b', 2]
+    ])
+  ).toStrictEqual({ a: 1, b: 2 })
+  expect(fromEntries([[undefined, 1]])).toStrictEqual({ undefined: 1 })
+  expect(fromEntries([[{}, 1]])).toStrictEqual({ '[object Object]': 1 })
 })
