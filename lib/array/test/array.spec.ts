@@ -19,6 +19,7 @@ import { intersection } from '../intersection'
 import { intersectionWith } from '../intersectionWith'
 import { join } from '../join'
 import { last } from '../last'
+import { lastIndexOf } from '../lastIndexOf'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -178,4 +179,12 @@ test('last', () => {
   expect(last([])).toBe(undefined)
   expect(last([1, 2, 3])).toBe(3)
   expect(last([obj])).toBe(obj)
+})
+
+test.only('lastIndexOf', () => {
+  const arr = [1, 2, 3, 4, 2, 3]
+
+  expect(lastIndexOf(arr, 2)).toBe(4)
+  expect(lastIndexOf(arr, 2, 2)).toBe(1)
+  expect(lastIndexOf(arr, 2, -3)).toBe(1)
 })
