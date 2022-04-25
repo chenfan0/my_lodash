@@ -56,6 +56,7 @@ test('fill', () => {
   expect(fill([1, 2, 3], 'a')).toStrictEqual(['a', 'a', 'a'])
   expect(fill(Array(3), 2)).toStrictEqual([2, 2, 2])
   expect(fill([4, 6, 8, 10], '*', 1, 3)).toStrictEqual([4, '*', '*', 10])
+  expect(fill([4, 6, 8, 10], '*', -1)).toStrictEqual([4, 6, 8, '*'])
 })
 
 test('findIndex', () => {
