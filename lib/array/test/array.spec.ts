@@ -11,6 +11,7 @@ import { findIndex } from '../findIndex'
 import { findLastIndex } from '../findLastIndex'
 import { head } from '../head'
 import { indexOf } from '../indexOf'
+import { slice } from '../slice'
 
 test('chunk', () => {
   expect(chunk(['a', 'b', 'c', 'd'], 2)).toStrictEqual([
@@ -92,4 +93,20 @@ test('head', () => {
 test('indexOf', () => {
   expect(indexOf([1, 2, 1, 2], 2)).toBe(1)
   expect(indexOf([1, 2, 1, 2], 2, 2)).toBe(3)
+})
+
+test('slice', () => {
+  const arr = [1, 2, 3, 4, 5]
+  expect(slice(arr)).toStrictEqual(arr.slice())
+  expect(slice(arr, 0, 5)).toStrictEqual(arr.slice(0, 5))
+  // start和end相同
+  expect(slice(arr, 0, 0)).toStrictEqual(arr.slice(0, 0))
+  // end负数情况
+  expect(slice(arr, 0, -1)).toStrictEqual(arr.slice(0, -1))
+  // start和end都为负数的情况
+  expect(slice(arr, -2, -1)).toStrictEqual(arr.slice(-2, -1))
+  expect(slice(arr, -2, -3)).toStrictEqual(arr.slice(-2, -3))
+  // 小数情况
+  expect(slice(arr, 0, 3.5)).toStrictEqual(arr.slice(0, 3.5))
+  expect(slice(arr, 0, -3.5)).toStrictEqual(arr.slice(0, -3.5))
 })
