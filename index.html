@@ -9,23 +9,7 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script>
-      function foo() {}
-      function bar() {}
-      const arr1 = [1, 2]
-      const arr2 = [2, 1]
-      const set1 = new Set([1, 2])
-      const set2 = new Set(arr2)
-      const weakSet1 = new WeakSet()
-      const weakSet2 = new WeakSet()
-      console.log(set1, set2)
-      const reg1 = /^/
-      const reg2 = /^/
-
-      // console.log(reg1.valueOf() === reg2.valueOf())
-      // console.log(_.isEqual(reg1, reg2))
-      // console.log(_.isEqual(arr1, arr2))
-      // console.log(_.isEqual(set1, set2))
-      console.log(_.isEqual(weakSet1, weakSet2))
+      console.log(_.intersection([2, 1], [2, 3, 1], [9, 2, 1], [2] , [3]))
     </script>
   </body>
 </html>

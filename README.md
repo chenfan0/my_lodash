@@ -11,6 +11,7 @@
   - [fill.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/fill.ts)
   - [findIndex.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/findIndex.ts)
   - [findLastIndex.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/findLastIndex.ts)
+  - [flatten.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/flatten.ts)
   - [head.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/head.ts)
   - [indexOf.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/indexOf.ts)
   - [initial.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/initial.ts)

@@ -9,6 +9,7 @@ import { dropRight } from '../dropRight'
 import { fill } from '../fill'
 import { findIndex } from '../findIndex'
 import { findLastIndex } from '../findLastIndex'
+import { flatten } from '../flatten'
 import { head } from '../head'
 import { indexOf } from '../indexOf'
 import { initial } from '../initial'
@@ -114,4 +115,12 @@ test('slice', () => {
 
 test('initial', () => {
   expect(initial([1, 2, 3])).toStrictEqual([1, 2])
+})
+
+test('flatten', () => {
+  expect(flatten([1, [2, [3, [4]], 5]], 0)).toStrictEqual([1, [2, [3, [4]], 5]])
+  expect(flatten([1, [2, [3, [4]], 5]])).toStrictEqual([1, 2, [3, [4]], 5])
+  expect(flatten([1, [2, [3, [4]], 5]], 2)).toStrictEqual([1, 2, 3, [4], 5])
+  expect(flatten([1, [2, [3, [4]], 5]], 3)).toStrictEqual([1, 2, 3, 4, 5])
+  expect(flatten([1, [2, [3, [4]], 5]], 4)).toStrictEqual([1, 2, 3, 4, 5])
 })
