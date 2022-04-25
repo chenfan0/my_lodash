@@ -42,6 +42,8 @@ test('drop', () => {
   expect(drop([1, 2, 3])).toStrictEqual([2, 3])
   expect(drop([1, 2, 3], 2)).toStrictEqual([3])
   expect(drop([1, 2, 3], 0)).toStrictEqual([1, 2, 3])
+
+  expect(drop([1, 2, 3], -1)).toStrictEqual([3])
 })
 
 test('dropRight', () => {
