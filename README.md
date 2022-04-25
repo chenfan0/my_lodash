@@ -18,6 +18,7 @@
   - [head.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/head.ts)
   - [indexOf.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/indexOf.ts)
   - [initial.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/initial.ts)
+  - [intersection.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/intersection.ts)
   - [slice.ts](https://github.com/chenfan0/my_lodash/tree/main/lib/array/slice.ts)
 - [collection](https://github.com/chenfan0/my_lodash/tree/main/lib/collection)
 - [lang](https://github.com/chenfan0/my_lodash/tree/main/lib/lang)

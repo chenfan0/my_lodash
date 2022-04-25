@@ -14,6 +14,7 @@ import { fromEntries } from '../fromEntries'
 import { head } from '../head'
 import { indexOf } from '../indexOf'
 import { initial } from '../initial'
+import { intersection } from '../intersection'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -138,4 +139,13 @@ test('fromEntries', () => {
   ).toStrictEqual({ a: 1, b: 2 })
   expect(fromEntries([[undefined, 1]])).toStrictEqual({ undefined: 1 })
   expect(fromEntries([[{}, 1]])).toStrictEqual({ '[object Object]': 1 })
+})
+
+test('intersection', () => {
+  expect(intersection()).toStrictEqual([])
+  expect(intersection([1, 2])).toStrictEqual([1, 2])
+  expect(intersection([1, 1, 2, 2])).toStrictEqual([1, 2])
+  expect(intersection([2, 1], [2, 3])).toStrictEqual([2])
+  expect(intersection([2, 1], [3, 4])).toStrictEqual([])
+  expect(intersection([2, 1, 2], [3, 2], [2])).toStrictEqual([2])
 })
