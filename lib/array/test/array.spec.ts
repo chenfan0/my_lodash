@@ -9,6 +9,7 @@ import { dropRight } from '../dropRight'
 import { fill } from '../fill'
 import { findIndex } from '../findIndex'
 import { findLastIndex } from '../findLastIndex'
+import { head } from '../head'
 
 test('chunk', () => {
   expect(chunk(['a', 'b', 'c', 'd'], 2)).toStrictEqual([
@@ -80,4 +81,9 @@ test('findLastIndex', () => {
       return value === 8
     })
   ).toBe(-1)
+})
+
+test('head', () => {
+  expect(head([1, 2, 3])).toBe(1)
+  expect(head([])).toBe(undefined)
 })
