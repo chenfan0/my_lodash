@@ -9,8 +9,32 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script>
-      console.log(_.sortedIndex([1, 2, 3, 4, 4, 5, 5, 5, 6], 6));
+      // console.log(_.sortedIndex([1, 2, 3, 4, 4, 5, 5, 5, 6], 6))
+      function sortedLastIndexOf(array, value) {
+        debugger
 
+        const n = array.length
+        if (!n) return -1
+
+        let i = 0
+        let j = n
+
+        while (i < j) {
+          console.log(i, j)
+          const mid = (i + j) >> 1
+          const item = array[mid]
+          console.log(i, j)
+
+          if (item > value) {
+            j = mid - 1
+          } else {
+            i = mid
+          }
+        }
+        return array[i] === value ? i : -1
+      }
+
+      sortedLastIndexOf([1, 2, 3, 4, 4, 5, 5, 5, 6], 3)
     </script>
   </body>
 </html>
