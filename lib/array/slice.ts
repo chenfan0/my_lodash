@@ -1,3 +1,5 @@
+import { ensureInteger, ensurePositive } from './helper'
+
 export function slice(array: any[], start = 0, end = array.length) {
   const length = array.length
   // 确保start和end为整数
@@ -17,12 +19,4 @@ export function slice(array: any[], start = 0, end = array.length) {
   }
 
   return result
-}
-
-function ensureInteger(value: number) {
-  return Number.isInteger(value) ? value : value >= 0 ? Math.floor(value) : Math.ceil(value)
-}
-
-function ensurePositive(value: number, replace: number = Math.abs(value)) {
-  return value >= 0 ? value : replace
 }
