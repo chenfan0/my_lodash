@@ -21,6 +21,7 @@ import { intersectionWith } from '../intersectionWith'
 import { join } from '../join'
 import { last } from '../last'
 import { lastIndexOf } from '../lastIndexOf'
+import { pull } from '../pull'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -195,4 +196,10 @@ test('at', () => {
   expect(at(arr)).toBe(1)
   expect(at(arr, -1)).toBe(3)
   expect(at(arr, -10)).toBe(undefined)
+})
+
+test('pull', () => {
+  const arr = ['a', 'b', 'c', 'a', 'b', 'c']
+  pull(arr, 'a', 'c')
+  expect(arr).toStrictEqual(['b', 'b'])
 })
