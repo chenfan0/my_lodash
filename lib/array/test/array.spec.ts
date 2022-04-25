@@ -18,6 +18,7 @@ import { initial } from '../initial'
 import { intersection } from '../intersection'
 import { intersectionWith } from '../intersectionWith'
 import { join } from '../join'
+import { last } from '../last'
 import { slice } from '../slice'
 
 test('chunk', () => {
@@ -170,4 +171,11 @@ test('join', () => {
   expect(join([1, 2, 3], '*')).toBe('1*2*3')
   expect(join([undefined, 2, 3], '*')).toBe('*2*3')
   expect(join([{}, 2, 3], '*')).toBe('[object Object]*2*3')
+})
+
+test('last', () => {
+  const obj = {}
+  expect(last([])).toBe(undefined)
+  expect(last([1, 2, 3])).toBe(3)
+  expect(last([obj])).toBe(obj)
 })
